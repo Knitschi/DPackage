@@ -1,10 +1,10 @@
-#include <DPackage/d.h>
+#include <DPackage/function.h>
 
 #include <iostream>
 
 namespace d
 {
-    void dFunction()
+    void function()
     {
         std::cout << "blub";
     }

@@ -4,7 +4,7 @@
 
 namespace d
 {
-    D_EXPORT void dFunction();
+    D_EXPORT void function();
 }
 
 

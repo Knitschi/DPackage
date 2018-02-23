@@ -14,8 +14,8 @@ cpfInitPackageProject(
 ############################################## Define code files ###################################################
 
 set( PACKAGE_PRODUCTION_FILES
-	d.cpp
-	d.h
+	function.cpp
+	function.h
 )
 
 set( PACKAGE_FIXTURE_FILES
