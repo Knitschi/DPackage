@@ -6,12 +6,4 @@ namespace d
 {
     D_EXPORT void dFunction();
 }
-namespace{} 
-namespace{} 
-namespace{} 
-namespace{} 
-namespace{} 
-namespace{} 
-namespace{} 
-namespace{} 
-namespace{} 
+
