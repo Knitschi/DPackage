@@ -8,6 +8,11 @@ namespace d
     {
         std::cout << "blub";
     }
+
+    int function2()
+    {
+        return 5;
+    }
 }
 
 

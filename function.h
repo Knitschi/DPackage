@@ -5,6 +5,7 @@
 namespace d
 {
     D_EXPORT void function();
+    D_EXPORT int function2();
 }
 
 
