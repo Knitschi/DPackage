@@ -1,4 +1,4 @@
-include(cpfAddPackage)
+include(cpfAddCppPackage)
 
 # define namespace name for module
 set( PACKAGE_NAMESPACE d )
@@ -44,7 +44,7 @@ set( distPackageOptions
 )
 
 ############################################## Add Package #################################
-cpfAddPackage( 
+cpfAddCppPackage( 
 	PACKAGE_NAME			${PACKAGE_NAME}
 	PACKAGE_NAMESPACE		${PACKAGE_NAMESPACE}
 	TYPE					LIB
