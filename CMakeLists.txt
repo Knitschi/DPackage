@@ -1,17 +1,12 @@
+include(cpfInitPackageProject)
 include(cpfAddCppPackage)
 
-# define namespace name for module
-set( PACKAGE_NAMESPACE d )
+cpfInitPackageProject()
 
 set( briefDescription "An empty C++ libary used for testing the CPF" )
 set( longDescription "" )
 
-cpfInitPackageProject(
-	PACKAGE_NAME
-	${PACKAGE_NAMESPACE}
-)
-
-############################################## Define code files ###################################################
+############################################## list source files ###################################################
 
 set( PACKAGE_PUBLIC_HEADER
 	function.h
@@ -19,19 +14,6 @@ set( PACKAGE_PUBLIC_HEADER
 
 set( PACKAGE_PRODUCTION_FILES
 	function.cpp
-)
-
-set( PACKAGE_FIXTURE_FILES
-)
-
-set( PACKAGE_TEST_FILES
-)
-
-# names of the libraries that are linked to this target
-set(PACKAGE_LINKED_LIBRARIES
-)
-
-set(PACKAGE_LINKED_TEST_LIBRARIES
 )
 
 set( distPackageOptions
@@ -45,17 +27,12 @@ set( distPackageOptions
 
 ############################################## Add Package #################################
 cpfAddCppPackage( 
-	PACKAGE_NAME			${PACKAGE_NAME}
-	PACKAGE_NAMESPACE		${PACKAGE_NAMESPACE}
+	PACKAGE_NAMESPACE		d
 	TYPE					LIB
 	BRIEF_DESCRIPTION		${briefDescription}
 	LONG_DESCRIPTION		${longDescription}
 	PUBLIC_HEADER			${PACKAGE_PUBLIC_HEADER}
 	PRODUCTION_FILES		${PACKAGE_PRODUCTION_FILES}
-	FIXTURE_FILES			${PACKAGE_FIXTURE_FILES}
-	TEST_FILES				${PACKAGE_TEST_FILES}
-	LINKED_LIBRARIES		${PACKAGE_LINKED_LIBRARIES}
-	LINKED_TEST_LIBRARIES	${PACKAGE_LINKED_TEST_LIBRARIES}
 	${distPackageOptions}
 	GENERATE_PACKAGE_DOX_FILES
 )
