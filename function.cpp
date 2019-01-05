@@ -6,7 +6,7 @@ namespace d
 {
     void function()
     {
-        std::cout << "blub";
+        std::cout << "blub" << "\n";
     }
 
     int function2()
