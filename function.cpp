@@ -14,24 +14,3 @@ namespace d
 		return 5;
 	}
 }
-
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
-namespace
-{}
