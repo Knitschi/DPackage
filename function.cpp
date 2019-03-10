@@ -14,3 +14,5 @@ namespace d
 		return 5;
 	}
 }
+
+namespace {}
