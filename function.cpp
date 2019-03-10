@@ -15,4 +15,5 @@ namespace d
 	}
 }
 
-namespace {}
+namespace
+{}
