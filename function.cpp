@@ -11,7 +11,8 @@ namespace d
 
 	int function2()
 	{
-		return 5;
+		const int retVal = 5;
+		return retVal;
 	}
 }
 
