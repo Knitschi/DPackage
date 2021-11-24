@@ -1,10 +1,17 @@
-include(cpfInitPackageProject)
-include(cpfAddCppPackage)
+include(cpfPackageProject)
+include(cpfAddCppPackageComponent)
 
-cpfInitPackageProject()
-
-set( briefDescription "An empty C++ libary used for testing the CPF" )
-set( longDescription "" )
+cpfPackageProject(
+	BRIEF_DESCRIPTION						"An empty C++ libary used for testing the CPF"
+	TARGET_NAMESPACE 						d
+	COMPONENTS SINGLE_COMPONENT
+	DISTRIBUTION_PACKAGES
+		DISTRIBUTION_PACKAGE_CONTENT_TYPE 	CT_DEVELOPER
+		DISTRIBUTION_PACKAGE_FORMATS 		7Z
+	DISTRIBUTION_PACKAGES
+		DISTRIBUTION_PACKAGE_CONTENT_TYPE 	CT_SOURCES
+		DISTRIBUTION_PACKAGE_FORMATS 		ZIP
+)
 
 ############################################## list source files ###################################################
 
@@ -16,23 +23,12 @@ set( PACKAGE_PRODUCTION_FILES
 	function.cpp
 )
 
-set( distPackageOptions
-	DISTRIBUTION_PACKAGES
-	DISTRIBUTION_PACKAGE_CONTENT_TYPE 	CT_DEVELOPER
-	DISTRIBUTION_PACKAGE_FORMATS 		7Z
-	DISTRIBUTION_PACKAGES
-	DISTRIBUTION_PACKAGE_CONTENT_TYPE 	CT_SOURCES
-	DISTRIBUTION_PACKAGE_FORMATS 		ZIP
-)
-
 ############################################## Add Package #################################
-cpfAddCppPackage( 
-	PACKAGE_NAMESPACE		d
+cpfAddCppPackageComponent( 
 	TYPE					LIB
 	BRIEF_DESCRIPTION		${briefDescription}
 	LONG_DESCRIPTION		${longDescription}
 	PUBLIC_HEADER			${PACKAGE_PUBLIC_HEADER}
 	PRODUCTION_FILES		${PACKAGE_PRODUCTION_FILES}
-	${distPackageOptions}
 	ENABLE_PACKAGE_DOX_FILE_GENERATION TRUE
 )
